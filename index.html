@@ -21,9 +21,7 @@ class CricXCrateUI extends HTMLElement {
     this._shadow = this.attachShadow({ mode: 'closed' });
     this.SENSITIVITY = 2.5;
     
-    // Updated mapping including new backups & star2 feeds
     this.CHANNELS = {
-      // Star Sports Category
       "1": { name: "Star Default", url: "https://sportlink10-ajp.pages.dev/star?id=1998" },
       "2": { name: "Star 1 HD", url: "https://sportlink10-ajp.pages.dev/star?id=1106" },
       "3": { name: "Star 2 HD", url: "https://sportlink10-ajp.pages.dev/star?id=1109" },
@@ -48,8 +46,6 @@ class CricXCrateUI extends HTMLElement {
       "22": { name: "Star 2 Telugu HD", url: "https://sportlink10-ajp.pages.dev/star?id=3274" },
       "23": { name: "Star 1 Kannada", url: "https://sportlink10-ajp.pages.dev/star?id=1650" },
       "24": { name: "Star 2 Kannada", url: "https://sportlink10-ajp.pages.dev/star?id=1122" },
-
-      // Star2 Domain Backup Feeds
       "77": { name: "Star 1 Tamil (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=1124" },
       "78": { name: "Star 1 Telugu HD (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=3278" },
       "79": { name: "Star 1 Telugu (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=1651" },
@@ -59,8 +55,6 @@ class CricXCrateUI extends HTMLElement {
       "83": { name: "Star 2 Tamil (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=2853" },
       "84": { name: "Star 2 Telugu HD (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=3274" },
       "85": { name: "Star 2 Telugu (B)", url: "https://sportlink10-ajp.pages.dev/star2?id=2852" },
-
-      // Star Sports Secondary Backups
       "35": { name: "Star 1 SD (B)", url: "https://sonucdn-v2.pages.dev/star?id=E1SD" },
       "36": { name: "Star 1 HD (B)", url: "https://sonucdn-v2.pages.dev/star?id=E1HD" },
       "37": { name: "Star 1 Hindi (B)", url: "https://sonucdn-v2.pages.dev/star?id=H1SD" },
@@ -84,8 +78,6 @@ class CricXCrateUI extends HTMLElement {
       "55": { name: "Star 2 Telugu (B2)", url: "https://sonucdn-v2.pages.dev/star?id=TE2SD" },
       "56": { name: "Star 2 Telugu HD (B2)", url: "https://sonucdn-v2.pages.dev/star?id=TE2HD" },
       "57": { name: "Star 2 Kannada (B2)", url: "https://sonucdn-v2.pages.dev/star?id=KA2SD" },
-
-      // Sony Sports Category
       "25": { name: "Sony Sports 1 HD", url: "https://sportlink10-ajp.pages.dev/sony?id=sony-sports-1-hd" },
       "26": { name: "Sony Sports 2 HD", url: "https://sportlink10-ajp.pages.dev/sony?id=sony-sports-2-hd" },
       "27": { name: "Sony Sports 3 HD", url: "https://sportlink10-ajp.pages.dev/sony?id=sony-sports-3-hd" },
@@ -106,20 +98,14 @@ class CricXCrateUI extends HTMLElement {
       "71": { name: "Sony Ten 2 HD", url: "https://sonucdn-v2.pages.dev/star?id=STEN2HD" },
       "72": { name: "Sony Ten 3 HD", url: "https://sonucdn-v2.pages.dev/star?id=STEN3HD" },
       "73": { name: "Sony Ten 5 HD", url: "https://sonucdn-v2.pages.dev/star?id=STEN5HD" },
-
-      // Movies / Entertainment Category (Including SAB HD and SET SD/HD)
       "74": { name: "Sony Max HD", url: "https://sportlink10-ajp.pages.dev/sony?id=sony-max-hd" },
       "75": { name: "Sony Set HD", url: "https://sonucdn-v2.pages.dev/star?id=SETHD" },
       "76": { name: "Sony Max HD (Alt)", url: "https://sonucdn-v2.pages.dev/star?id=SMAX" },
       "86": { name: "Sony SAB HD", url: "https://sportlink10-ajp.pages.dev/sony?id=sony-sab-hd" },
       "87": { name: "Sony SET SD", url: "https://sportlink10-ajp.pages.dev/sony?id=set-sd" },
       "88": { name: "Sony SET HD (Alt)", url: "https://sportlink10-ajp.pages.dev/sony?id=set-hd" },
-
-      // Eurosport Category
       "32": { name: "Eurosport", url: "https://sportlink10-ajp.pages.dev/star?id=1294" },
       "33": { name: "Eurosport HD", url: "https://sportlink10-ajp.pages.dev/star?id=875" },
-
-      // DD Sports Category
       "34": { name: "DD Sports", url: "https://sportlink10-ajp.pages.dev/star?id=204" }
     };
 
@@ -468,7 +454,15 @@ class CricXCrateUI extends HTMLElement {
                 <button class="channel-btn" data-chid="22">Star 2 Telugu HD</button>
                 <button class="channel-btn" data-chid="23">Star 1 Kannada</button>
                 <button class="channel-btn" data-chid="24">Star 2 Kannada</button>
-                <!-- Backups & Star2 Feeds -->
+                <button class="channel-btn" data-chid="77">Star 1 Tamil (B)</button>
+                <button class="channel-btn" data-chid="78">Star 1 Telugu HD (B)</button>
+                <button class="channel-btn" data-chid="79">Star 1 Telugu (B)</button>
+                <button class="channel-btn" data-chid="80">Star 1 Kannada (B)</button>
+                <button class="channel-btn" data-chid="81">Star 2 Kannada (B)</button>
+                <button class="channel-btn" data-chid="82">Star 2 Tamil HD (B)</button>
+                <button class="channel-btn" data-chid="83">Star 2 Tamil (B)</button>
+                <button class="channel-btn" data-chid="84">Star 2 Telugu HD (B)</button>
+                <button class="channel-btn" data-chid="85">Star 2 Telugu (B)</button>
                 <button class="channel-btn" data-chid="35">Star 1 SD (B)</button>
                 <button class="channel-btn" data-chid="36">Star 1 HD (B)</button>
                 <button class="channel-btn" data-chid="37">Star 1 Hindi (B)</button>
@@ -482,25 +476,16 @@ class CricXCrateUI extends HTMLElement {
                 <button class="channel-btn" data-chid="45">Star Select 1 HD (B)</button>
                 <button class="channel-btn" data-chid="46">Star Select 2 (B)</button>
                 <button class="channel-btn" data-chid="47">Star Select 2 HD (B)</button>
-                <button class="channel-btn" data-chid="48">Star 1 Tamil (B)</button>
-                <button class="channel-btn" data-chid="49">Star 1 Tamil HD (B)</button>
-                <button class="channel-btn" data-chid="50">Star 1 Telugu (B)</button>
-                <button class="channel-btn" data-chid="51">Star 1 Telugu HD (B)</button>
-                <button class="channel-btn" data-chid="52">Star 1 Kannada (B)</button>
-                <button class="channel-btn" data-chid="53">Star 2 Tamil (B)</button>
-                <button class="channel-btn" data-chid="54">Star 2 Tamil HD (B)</button>
-                <button class="channel-btn" data-chid="55">Star 2 Telugu (B)</button>
-                <button class="channel-btn" data-chid="56">Star 2 Telugu HD (B)</button>
-                <button class="channel-btn" data-chid="57">Star 2 Kannada (B)</button>
-                <button class="channel-btn" data-chid="77">Star 1 Tamil (B2)</button>
-                <button class="channel-btn" data-chid="78">Star 1 Telugu HD (B2)</button>
-                <button class="channel-btn" data-chid="79">Star 1 Telugu (B2)</button>
-                <button class="channel-btn" data-chid="80">Star 1 Kannada (B2)</button>
-                <button class="channel-btn" data-chid="81">Star 2 Kannada (B2)</button>
-                <button class="channel-btn" data-chid="82">Star 2 Tamil HD (B2)</button>
-                <button class="channel-btn" data-chid="83">Star 2 Tamil (B2)</button>
-                <button class="channel-btn" data-chid="84">Star 2 Telugu HD (B2)</button>
-                <button class="channel-btn" data-chid="85">Star 2 Telugu (B2)</button>
+                <button class="channel-btn" data-chid="48">Star 1 Tamil (B2)</button>
+                <button class="channel-btn" data-chid="49">Star 1 Tamil HD (B2)</button>
+                <button class="channel-btn" data-chid="50">Star 1 Telugu (B2)</button>
+                <button class="channel-btn" data-chid="51">Star 1 Telugu HD (B2)</button>
+                <button class="channel-btn" data-chid="52">Star 1 Kannada (B2)</button>
+                <button class="channel-btn" data-chid="53">Star 2 Tamil (B2)</button>
+                <button class="channel-btn" data-chid="54">Star 2 Tamil HD (B2)</button>
+                <button class="channel-btn" data-chid="55">Star 2 Telugu (B2)</button>
+                <button class="channel-btn" data-chid="56">Star 2 Telugu HD (B2)</button>
+                <button class="channel-btn" data-chid="57">Star 2 Kannada (B2)</button>
               </div>
 
               <!-- Sony Sports Grid -->
@@ -737,16 +722,19 @@ class CricXCrateUI extends HTMLElement {
     if (btnShare) {
       btnShare.addEventListener("click", async () => {
         const currentShareUrl = window.location.origin + window.location.pathname + '?id=' + this.currentChannelId;
+        const activeChannelName = this.CHANNELS[this.currentChannelId].name;
+        
+        // Share text ab sirf Channel Name aur Link bhejega
         const shareData = {
-          title: "CRICXCRATE — Sports TV",
-          text: "Watch this live sports channel on CRICXCRATE!",
+          title: activeChannelName,
+          text: `${activeChannelName}\n`,
           url: currentShareUrl
         };
         try {
           if (navigator.share && /mobile|android|iphone|ipad|tablet/i.test(navigator.userAgent)) {
             await navigator.share(shareData);
           } else if (navigator.clipboard) {
-            await navigator.clipboard.writeText(currentShareUrl);
+            await navigator.clipboard.writeText(`${activeChannelName}: ${currentShareUrl}`);
             const originalText = shareBtnText.textContent;
             shareBtnText.textContent = "LINK COPIED!";
             setTimeout(() => { shareBtnText.textContent = originalText; }, 1800);
@@ -828,4 +816,3 @@ customElements.define('cricxcrate-ui', CricXCrateUI);
     </script>
 </body>
 </html>
-
